@@ -25,6 +25,6 @@ Mulai dengan membuat proyek Flutter baru, menentukan desain dan struktur dasar a
 2. Membuat Tiga Tombol Sederhana dengan Ikon dan Teks
 Menggunakan widget ElevatedButton atau IconButton untuk tombol “Lihat Daftar Produk”, “Tambah Produk”, dan “Logout”.
 3. Mengimplementasikan Warna Berbeda untuk Setiap Tombol
-Setiap tombol dapat diberi warna berbeda dengan properti style: ElevatedButton.styleFrom(primary: Colors.colorName). Namun saya memilih menyeragamkan warna button sesuai ciri khas aplikasi, namun icon pada button berbeda-beda. 
+Setiap tombol diberi warna berbeda dengan properti style: ElevatedButton.styleFrom(primary: Colors.colorName).
 4. Memunculkan Snackbar
 Pada setiap tombol, tambahkan fungsi onPressed yang akan menampilkan Snackbar menggunakan ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Pesan Snackbar")));.
