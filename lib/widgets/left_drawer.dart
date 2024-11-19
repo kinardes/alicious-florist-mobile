@@ -1,3 +1,4 @@
+import 'package:alicious_florist/screens/list_shop.dart';
 import 'package:flutter/material.dart';
 import 'package:alicious_florist/screens/menu.dart';
 import 'package:alicious_florist/screens/productentry_form.dart';
@@ -52,18 +53,29 @@ class LeftDrawer extends StatelessWidget {
                 },
               ),
             ListTile(
-              leading: const Icon(Icons.add),
-              title: const Text('Tambah Item'),
-              // Bagian redirection ke ProductFormPage
+                leading: const Icon(Icons.add),
+                title: const Text('Tambah Item'),
+                // Bagian redirection ke ProductFormPage
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ProductEntryFormPage(),
+                    ),
+                  );
+                },
+              ),        
+            ListTile(
+              leading: const Icon(Icons.shop),
+              title: const Text('Daftar Produk'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ProductEntryFormPage(),
-                  ),
-                );
+                  // Route menu ke halaman mood
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MoodEntryPage()),
+                  );
               },
-            ),        
+          ),
           ],
       ),
     );
